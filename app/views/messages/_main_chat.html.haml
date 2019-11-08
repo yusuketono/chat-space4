@@ -30,4 +30,10 @@
         暇になりそうです
 
   .form
-    .new_message
+    %form
+      %input.form__message
+      .form__mask
+        %label.form__mask__image
+          = icon('fas','image', class: 'icon2')
+          %input.hidden{type: 'file' ,placeholder:'type a message'}
+      %input.form__submit{type: 'submit', value: 'Send'}
