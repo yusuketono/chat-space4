@@ -7,9 +7,10 @@
         members;
         %li.main-header__left__list__member
           東野1
-    = link_to "#" do
-      .main-header__edit
-        Edit
+    - current_user.groups.each do |group|
+      = link_to edit_group_path(group) do
+        .main-header__edit
+          Edit
 
   .messages
     .message
